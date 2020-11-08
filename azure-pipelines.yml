@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'FreeTrial'
+    subscriptionId: '12e9a061-b273-458c-aa1a-dc24c32340b5'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'twitter-streaming'
+    location: 'UK South'
+    templateLocation: 'Linked artifact'
+    csmFile: 'https://github.com/VarunBhandary/twitter-london-stream/blob/deployment-templates/deployment/event_hub/template.json'
+    csmParametersFile: 'https://github.com/VarunBhandary/twitter-london-stream/blob/deployment-templates/deployment/event_hub/parameters.json'
+    deploymentMode: 'Incremental'
