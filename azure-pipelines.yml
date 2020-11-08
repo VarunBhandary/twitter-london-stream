@@ -1,0 +1,65 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'FreeTrial'
+    subscriptionId: '12e9a061-b273-458c-aa1a-dc24c32340b5'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'twitter-streaming'
+    location: 'UK South'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/main/deployment/event_hub/template.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/main/deployment/event_hub/parameters.json'
+    deploymentMode: 'Incremental'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'FreeTrial'
+    subscriptionId: '12e9a061-b273-458c-aa1a-dc24c32340b5'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'twitter-streaming'
+    location: 'UK South'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/azure-pipelines/deployment/storage_account/template.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/azure-pipelines/deployment/storage_account/parameters.json'
+    deploymentMode: 'Incremental'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'FreeTrial'
+    subscriptionId: '12e9a061-b273-458c-aa1a-dc24c32340b5'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'twitter-streaming'
+    location: 'UK South'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/azure-pipelines/deployment/azure_vm/template.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/azure-pipelines/deployment/azure_vm/parameters.json'
+    overrideParameters: '-adminPassword $(vm-password)'
+    deploymentMode: 'Incremental'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'FreeTrial'
+    subscriptionId: '12e9a061-b273-458c-aa1a-dc24c32340b5'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'twitter-streaming'
+    location: 'UK South'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/azure-pipelines/deployment/event_hub/entities/template.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/azure-pipelines/deployment/event_hub/entities/parameters.json'
+    deploymentMode: 'Incremental'
+
