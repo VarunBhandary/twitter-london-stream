@@ -1,0 +1,2 @@
+SELECT text, created_at, retweet_count, favorite_count, quote_count, lang
+FROM LondonTwitterStream

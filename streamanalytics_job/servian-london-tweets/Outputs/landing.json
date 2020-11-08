@@ -1,0 +1,25 @@
+{
+    "Name": "landing",
+    "DataSourceType": "Blob Storage",
+    "BlobStorageProperties": {
+        "StorageAccounts": [
+            {
+                "AccountName": "serviantweetstreaming",
+                "AccountKey": null
+            }
+        ],
+        "Container": "landing",
+        "PathPattern": "",
+        "DateFormat": "yyyy/MM/dd",
+        "TimeFormat": "HH",
+        "AuthenticationMode": "ConnectionString"
+    },
+    "DataSourceCredentialDomain": "bb4c212c-b17a-4278-8bfe-3c065d0bd156.StreamAnalystics",
+    "Serialization": {
+        "Type": "Json",
+        "Encoding": "UTF8",
+        "Format": "LineSeparated",
+        "FieldDelimiter": null
+    },
+    "ScriptType": "Output"
+}
