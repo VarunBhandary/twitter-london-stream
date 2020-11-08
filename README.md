@@ -1,5 +1,5 @@
 # twitter-london-stream
-GCP Project for Twitter streaming "london" tags.
+Microsoft Azure based Project for Twitter streaming "london" tags.
 
 The project uses following Azure Resources -
 1. Azure Event Hub. 
