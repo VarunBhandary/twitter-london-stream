@@ -46,7 +46,7 @@ steps:
     location: 'UK South'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/main/deployment/azure_vm/template.json'
-    csmParametersFileLink: 'https://github.com/VarunBhandary/twitter-london-stream/blob/main/deployment/azure_vm/parameters.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/main/deployment/azure_vm/parameters.json'
     overrideParameters: '-adminPassword $(vm-password)'
     deploymentMode: 'Incremental'
 
@@ -60,6 +60,6 @@ steps:
     location: 'UK South'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/main/deployment/event_hub/entities/template.json'
-    csmParametersFileLink: 'https://github.com/VarunBhandary/twitter-london-stream/blob/main/deployment/event_hub/entities/parameters.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/main/deployment/event_hub/entities/parameters.json'
     deploymentMode: 'Incremental'
 
