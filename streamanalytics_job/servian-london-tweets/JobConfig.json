@@ -1,0 +1,23 @@
+{
+    "Tags": {},
+    "DataLocale": "en-US",
+    "OutputErrorPolicy": "Retry",
+    "EventsLateArrivalMaxDelayInSeconds": 5,
+    "EventsOutOfOrderMaxDelayInSeconds": 0,
+    "EventsOutOfOrderPolicy": "Adjust",
+    "ScriptType": "JobConfig",
+    "CompatibilityLevel": "1.2",
+    "UseSystemAssignedIdentity": false,
+    "GlobalStorage": {
+        "AccountName": null,
+        "AccountKey": null
+    },
+    "CustomCodeStorage": {
+        "AccountName": null,
+        "AccountKey": null,
+        "ContainerName": null,
+        "Path": null
+    },
+    "DataSourceCredentialDomain": null,
+    "StreamingUnits": 3
+}

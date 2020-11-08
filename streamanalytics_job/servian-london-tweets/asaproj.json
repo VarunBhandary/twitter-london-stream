@@ -1,0 +1,18 @@
+{
+    "name": "servian-london-tweets",
+    "startFile": "Transformation.asaql",
+    "configurations": [
+        {
+            "filePath": "JobConfig.json",
+            "subType": "JobConfig"
+        },
+        {
+            "filePath": "Inputs/LondonTwitterStream.json",
+            "subType": "Input"
+        },
+        {
+            "filePath": "Outputs/landing.json",
+            "subType": "Output"
+        }
+    ]
+}
