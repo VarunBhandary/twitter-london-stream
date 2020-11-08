@@ -19,6 +19,6 @@ steps:
     resourceGroupName: 'twitter-streaming'
     location: 'UK South'
     templateLocation: 'Linked artifact'
-    csmFile: 'https://github.com/VarunBhandary/twitter-london-stream/blob/main/deployment/event_hub/parameters.json'
-    csmParametersFile: 'https://github.com/VarunBhandary/twitter-london-stream/blob/main/deployment/event_hub/parameters.json'
+    csmFile: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/main/deployment/event_hub/template.json'
+    csmParametersFile: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/main/deployment/event_hub/parameters.json'
     deploymentMode: 'Incremental'
