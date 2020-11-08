@@ -47,6 +47,7 @@ steps:
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/azure-pipelines/deployment/azure_vm/template.json'
     csmParametersFileLink: 'https://raw.githubusercontent.com/VarunBhandary/twitter-london-stream/azure-pipelines/deployment/azure_vm/parameters.json'
+    overrideParameters: '-adminPassword $(vm-password)'
     deploymentMode: 'Incremental'
 
 - task: AzureResourceManagerTemplateDeployment@3
