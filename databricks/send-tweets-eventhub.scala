@@ -55,7 +55,7 @@ if (dataSource == "twitter") {
   import twitter4j.conf.ConfigurationBuilder
 
   // Twitter configuration!
-  // Replace values below with you
+  // Replace values below with your Twitter API registration and App secrets and tokens
 
   val twitterConsumerKey = "##REDACTED##"
   val twitterConsumerSecret = "##REDACTED##"
@@ -72,7 +72,7 @@ if (dataSource == "twitter") {
   val twitterFactory = new TwitterFactory(cb.build())
   val twitter = twitterFactory.getInstance()
 
-  // Getting tweets with keyword "Azure" and sending them to the Event Hub in realtime!
+  // Getting tweets with keyword "london" and sending them to the Event Hub in realtime!
   val query = new Query(" #london ")
   query.setCount(100)
   query.lang("en")
