@@ -57,10 +57,10 @@ if (dataSource == "twitter") {
   // Twitter configuration!
   // Replace values below with you
 
-  val twitterConsumerKey = "AIZ3UQTTP2VCHl646nowg1k4l"
-  val twitterConsumerSecret = "iaKMm2hc36WguB5xCRhLb7cbjet3IdLJ4ZUaebenZtsQbtweij"
-  val twitterOauthAccessToken = "3036547933-280oJ81U4c2OEE2RaN4RkHfjgkn1QPUcsc7LU4s"
-  val twitterOauthTokenSecret = "SvQCAi8NXFBEPk8wKeUX05EjnYfoVLe6k4NefFyXt8jpl"
+  val twitterConsumerKey = "##REDACTED##"
+  val twitterConsumerSecret = "##REDACTED##"
+  val twitterOauthAccessToken = "##REDACTED##"
+  val twitterOauthTokenSecret = "##REDACTED##"
 
   val cb = new ConfigurationBuilder()
 	cb.setDebugEnabled(true)
