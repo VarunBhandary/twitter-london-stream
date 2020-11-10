@@ -1,7 +1,7 @@
 # Project "twitter-london-stream"
 #### Microsoft Azure based Project for Twitter streaming "london" tags.
 
-![alt text](https://github.com/VarunBhandary/twitter-london-stream/blob/documentation-update-archcitecture/architecture_azure_twitter_streaming.png?raw=true)
+![Solution Architecture Diagram (Highlevel)](https://github.com/VarunBhandary/twitter-london-stream/blob/main/architecture_azure_twitter_streaming.png?raw=true)
 
 
 ### Pre-Requisites
